@@ -4,13 +4,13 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Burgers that I devoured this year</h3>
+    <h3 class="panel-title">Burgers that I would like to devour</h3>
   </div>
   <div class="panel-body">
-    <ul>
+    <ul class="list-group">
     {{#each burgers}}
         {{#unless devoured}}
-        {{burger_name}}
+        <li class="list-group-item">{{burger_name}}</li>
         {{/unless}}
     {{/each}}
     </ul>
@@ -19,13 +19,13 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Burgers I want to devour later</h3>
+    <h3 class="panel-title">Burgers that I have devoured</h3>
   </div>
   <div class="panel-body">
-    <ul>
+    <ul class="list-group">
     {{#each burgers}}
         {{#if devoured}}
-        {{burger_name}}
+        <li class="list-group-item">{{burger_name}}</li>
         {{/if}}
     {{/each}}
     </ul>
